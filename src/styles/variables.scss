@@ -1,0 +1,33 @@
+// variáveis da cor branca
+$colorWhite100 : #FDFDFD;
+$colorWhite200 : #FAFAFA;
+$colorWhite300 : #F0F0F0;
+$colorWhite400 : #E0E0E0;
+$colorWhite500 : #CFCFCF;
+$colorWhite600 : #BDBDBD;
+
+// variáveis da cor preto
+$colorBlack100 : #F5F5F5;
+$colorBlack200 : #E0E0E0;
+$colorBlack300 : #BDBDBD;
+$colorBlack400 : #D9D9D9;
+$colorBlack500 : #121212;
+
+// variáveis da cor preto com transparência
+$colorBlacktransp90 : rgba(13, 13, 13, 0.90);
+$colorBlacktransp82 : rgba(13, 13, 13, 0.82);
+$colorBlacktransp40 : rgba(13, 13, 13, 0.40);
+$colorBlacktransp12 : rgba(13, 13, 13, 0.12);
+
+// variáveis da cor blue
+$colorBlue100 : #759BFF;
+$colorBlue200 : #5F7FFF;
+$colorBlue300 : #3F5FBF;
+$colorBlue400 : #1A3A85;
+$colorBlue500 : #002366;
+$colorBlue600 : #021842;
+
+// gradiente
+
+$lightGradient: linear-gradient(to bottom, $colorWhite100, #949494);
+
