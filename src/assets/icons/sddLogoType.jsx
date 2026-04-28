@@ -1,5 +1,6 @@
 const SuporteDeDomingoLogoType = (props) => (
   <svg
+    className="sdd"
     xmlns="http://www.w3.org/2000/svg"
     width={156}
     height={65}
