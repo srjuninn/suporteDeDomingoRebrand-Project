@@ -1,4 +1,4 @@
-@import './breakpoints';
-@import './mixins';
-@import './reset';
-@import './variables.scss';
+@use '@styles/breakpoints.scss';
+@use '@styles/mixins.scss';
+@use '@styles/reset.scss';
+@use '@styles/variables.scss';
