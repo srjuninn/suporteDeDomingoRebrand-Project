@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import './styles/app.scss'
+import Header from '@layouts/Header'
+import '@styles/app.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const navLinks = [
+    {href: '#home', label:'Home'},
+    {href: '#projects', label:'Projects'},
+    {href: '#services', label:'Services'},
+    {href: '#contact', label:'Contact'},
+  ]
 
   return (
-   <h1>this is my page</h1>
+   <Header links={navLinks} />
   )
 }
 
