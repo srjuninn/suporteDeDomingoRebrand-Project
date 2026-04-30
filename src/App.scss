@@ -1,0 +1,9 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
+// aqui será o style do app
+body {
+    background-color: $colorBlack500;
+    @include centralize-flex;
+    flex-direction: column;
+    gap: 60px;
+}
