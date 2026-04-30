@@ -1,0 +1,94 @@
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 20px;
+  margin-top: 20%;
+  background: #121212; // fundo escuro pra destacar os cards
+  color: #fafafa;
+  text-align: center;
+
+  h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #66ccff;
+    }
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    position: relative;
+
+    button {
+      background: none;
+      border: none;
+      color: #fafafa;
+      font-size: 32px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.2);
+        color: #00aaff;
+      }
+    }
+
+    .card {
+      flex: 0 0 220px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fafafa;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+
+      &.active {
+        transform: scale(1.15);
+        opacity: 1;
+        filter: none;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      }
+
+      &.left,
+      &.right {
+        opacity: 0.6;
+        filter: blur(3px);
+        transform: scale(0.95);
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}

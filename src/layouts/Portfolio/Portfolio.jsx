@@ -1,0 +1,44 @@
+import { useState } from "react";
+import "@layouts/Portfolio/Portfolio.scss";
+
+const projects = [
+  { description: "Projeto A", link: "https://a.com" },
+  { description: "Projeto B", link: "https://b.com" },
+  { description: "Projeto C", link: "https://c.com" },
+  { description: "Projeto D", link: "https://d.com" },
+];
+
+export default function Portfolio() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const prev = () =>
+    setActiveIndex((activeIndex - 1 + projects.length) % projects.length);
+  const next = () =>
+    setActiveIndex((activeIndex + 1) % projects.length);
+
+  return (
+    <section className="portfolio">
+      <h2>Portfolio</h2>
+      <p>{projects[activeIndex].description}</p>
+      <a href={projects[activeIndex].link} target="_blank" rel="noreferrer">
+        Ver projeto
+      </a>
+
+      <div className="carousel">
+        <button onClick={prev}>←</button>
+        {projects.map((proj, i) => {
+          let className = "card";
+          if (i === activeIndex) className += " active";
+          else if (i === (activeIndex - 1 + projects.length) % projects.length)
+            className += " left";
+          else if (i === (activeIndex + 1) % projects.length)
+            className += " right";
+          else className += " hidden";
+
+          return <div key={i} className={className}>{proj.description}</div>;
+        })}
+        <button onClick={next}>→</button>
+      </div>
+    </section>
+  );
+}

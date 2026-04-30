@@ -3,6 +3,7 @@ import '@src/App.scss'
 // import SuporteDeDomingoLogoType from '@icons/sddLogoType'
 // import SwitchLanguage from '@components/SwitchLanguage/SwitchLanguage'
 import Main from '@layouts/Main/Main'
+import Portfolio from './layouts/Portfolio/Portfolio'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
 
       <Main content='Empresas sólidas Precisam de 
                       Um sistema Escalável!'/>
+      <Portfolio/>
     </>
   )
 }
