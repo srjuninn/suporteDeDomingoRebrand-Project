@@ -1,23 +1,17 @@
-import '@styles/app.scss'
-import Header from '@layouts/Header'
-import MainLayout from '@layouts/Main'
-import SuporteDeDomingoLogoType from '@icons/sddLogoType'
-import SwitchLanguage from '@components/SwitchLanguage'
+import '@src/App.scss'
+// import Header from '@layouts/Header/Header'
+// import SuporteDeDomingoLogoType from '@icons/sddLogoType'
+// import SwitchLanguage from '@components/SwitchLanguage/SwitchLanguage'
+import Main from '@layouts/Main/Main'
 
 function App() {
-  const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#services', label: 'Services' },
-    { href: '#contact', label: 'Contact' },
-  ]
+
 
   return (
     <>
-    <SuporteDeDomingoLogoType/>
-      <MainLayout />
-      <Header links={navLinks} />
-      <SwitchLanguage language="Portugese"/>
+
+      <Main content='Empresas sólidas Precisam de 
+                      Um sistema Escalável!'/>
     </>
   )
 }
