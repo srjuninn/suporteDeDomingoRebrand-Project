@@ -63,7 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sdd {
-  position: fixed;
+  position: absolute;
   top: 8.5%;
   left: 3.5%;
+}
+
+.background-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  z-index: -1; // fica atrás do conteúdo
 }
