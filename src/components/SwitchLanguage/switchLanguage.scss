@@ -1,0 +1,30 @@
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.switch {
+    position: absolute;
+    top: 9.5%;
+    right: 8%;
+    @include centralize-flex;
+    gap: 12px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-width: 212px;
+
+    background-color: $colorBlacktransp12;
+    border: 1px solid $colorWhite100;
+    box-shadow: 4px 4px 4px 0 rgba(250, 250, 250, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    .textWrap {
+        @include centralize-flex;
+        gap: 12px;
+
+        p {
+            color: $colorWhite100;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}
