@@ -5,9 +5,7 @@ button {
     @include centralize-flex;
     padding: 10px 20px;
     gap: 15px;
-    position: absolute;
-    left: 291px;
-    top: 656px;
+    transform: translateX(-35%);
     
     color: $colorWhite100;
     font-size: 30px;

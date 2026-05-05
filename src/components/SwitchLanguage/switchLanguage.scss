@@ -3,8 +3,9 @@
 
 .switch {
     position: absolute;
-    top: 9.5%;
-    right: 8%;
+    top: 4%;
+    right: 50%;
+    transform: translateX(250%);
     @include centralize-flex;
     gap: 12px;
     padding: 5px 10px;

@@ -3,18 +3,29 @@
 
     main {
         @include centralize-flex;
+        flex-direction: column;
         gap: 50px;
-        margin-top: 15%;
-        h1 {
-            font-size: 70px;
-            font-weight: 700;
-            text-align: right;
-            letter-spacing: 0.7;
-            color: $colorWhite100;
-            width: 600px;
-            height: 400px;
-            white-space: pre-line;
-        }
+        width: 1200px;
+        height: 800px;
+        background-image: url('@images/mainVetor.png');
+        background-repeat: no-repeat;   
+        background-size: cover;        
+        background-position: center;    
+        
+        .mainContent{
+            @include centralize-flex;
 
+            h1 {
+                font-size: 70px;
+                font-weight: 700;
+                text-align: right;
+                letter-spacing: 0.7;
+                color: $colorWhite100;
+                width: 600px;
+                height: 400px;
+                white-space: pre-line;
+            }
+
+        }
 
     }
