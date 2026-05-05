@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "@layouts/Portfolio/Portfolio.scss";
-// import LeftArrowImg from "@icons/LeftArrowIcon.png";
 import RightArrowImg from "@icons/RightArrowIcon.png";
-
 
 const projects = [
   { description: "Projeto A", link: "https://a.com" },
@@ -12,12 +10,16 @@ const projects = [
 ];
 
 export default function Portfolio() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(Math.floor(projects.length / 2));
 
   const prev = () =>
     setActiveIndex((activeIndex - 1 + projects.length) % projects.length);
+
   const next = () =>
     setActiveIndex((activeIndex + 1) % projects.length);
+
+  const leftIndex = (activeIndex - 1 + projects.length) % projects.length;
+  const rightIndex = (activeIndex + 1) % projects.length;
 
   return (
     <section className="portfolio">
@@ -32,24 +34,13 @@ export default function Portfolio() {
           <img src={RightArrowImg} alt="setinha pra voltar um card" />
         </button>
 
-        {projects.map((proj, i) => {
-          let className = "card";
-          if (i === activeIndex) className += " active";
-          else if (i === (activeIndex - 1 + projects.length) % projects.length)
-            className += " left";
-          else if (i === (activeIndex + 1) % projects.length)
-            className += " right";
-          else className += " hidden";
-
-          return (
-            <div key={i} className={className}>
-              {proj.description}
-            </div>
-          );
-        })}
+        <div className="cards-wrapper">
+          <div className="card left">{projects[leftIndex].description}</div>
+          <div className="card active">{projects[activeIndex].description}</div>
+          <div className="card right">{projects[rightIndex].description}</div>
+        </div>
 
         <button onClick={next} className="arrow right">
-          {/* <RightUpArrow /> */}
           <img src={RightArrowImg} alt="setinha direita pra avançar um card" />
         </button>
       </div>
