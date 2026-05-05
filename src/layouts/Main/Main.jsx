@@ -1,5 +1,4 @@
 import '@layouts/Main/Main.scss'
-import MainVetor from '@layouts/Main/MainVetor';
 import Button from '@components/Button/Button';
 import mainHeroImg from '@images/mainHeroImg.png'
 import Header from '@layouts/Header/Header'
@@ -19,11 +18,12 @@ export default function Main({ content }) {
                 <SuporteDeDomingoLogoType />
                 <Header links={navLinks} />
                 <SwitchLanguage language="Portugese" />
-                <MainVetor className="background-svg" />
-                <h1>{content}</h1>
-                <img src={mainHeroImg} alt="imagem ilustrativa de um serviço de desenvolvimnto de sistema" />
+                <div className="mainContent">
+                    <h1>{content}</h1>
+                    <img src={mainHeroImg} alt="imagem ilustrativa de um serviço de desenvolvimnto de sistema" />
+                </div>
+                <Button>Eu quero escalar!</Button>
             </main>
-            <Button>Eu quero escalar!</Button>
         </>
     )
 }
