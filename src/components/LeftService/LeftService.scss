@@ -1,0 +1,40 @@
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.leftService{
+    position: relative;
+    @include centralize-flex;    
+    flex-direction: column;
+    
+    gap: 30px;
+    padding: 10px 5px;
+    width: 300px;
+    
+    span {
+        position: absolute;
+        top: 6%;
+        left: 17%;
+        color: $colorWhite100;
+        font-weight: 600;
+    }
+    button {
+        padding: 0;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 70%;
+        left: 75%;
+        
+        img{
+            width: 100%;
+        }
+    }
+    img {
+        position: absolute;
+        width: 80%;
+    }
+    p{
+        color: $colorWhite100;
+    }
+}
