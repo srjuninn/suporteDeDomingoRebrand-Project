@@ -10,7 +10,7 @@ export default function RightService({ number, img, desc, name }){
                 <img src={leftArrow} alt="setinha pra cima na diagonal direita" />
             </button>
             <RightServiceVetor/>
-            <img src={img} alt={desc} />
+            <img className="serviceImg" src={img} alt={desc} />
             <p>{name}</p>                                
         </div>
     )

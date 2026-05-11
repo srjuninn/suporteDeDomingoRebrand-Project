@@ -10,7 +10,7 @@ export default function MiddleService({ number, img, desc, name }){
                 <img src={upArrow} alt="setinha pra cima na diagonal direita" />
             </button>
             <MiddleServiceVetor/>
-            <img src={img} alt={desc} />
+            <img className="serviceImg" src={img} alt={desc} />
             <p>{name}</p>                    
         </div>
     )
