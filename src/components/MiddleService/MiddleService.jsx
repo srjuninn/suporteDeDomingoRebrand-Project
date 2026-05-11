@@ -1,6 +1,5 @@
 import upArrow from '@icons/RightArrowIcon.png';
 import MiddleServiceVetor from '@components/MiddleService/MiddleServiceVetor';
-import middleImg from '@images/visualIdentityHeroImg.png'
 import '@components/MiddleService/MiddleService.scss' 
 
 export default function MiddleService({ number, img, desc, name }){
@@ -11,7 +10,7 @@ export default function MiddleService({ number, img, desc, name }){
                 <img src={upArrow} alt="setinha pra cima na diagonal direita" />
             </button>
             <MiddleServiceVetor/>
-            <img src={middleImg} alt={desc} />
+            <img src={img} alt={desc} />
             <p>{name}</p>                    
         </div>
     )
