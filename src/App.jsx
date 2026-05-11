@@ -15,7 +15,7 @@ function App() {
       <Main content='Empresas sólidas Precisam de 
                       Um sistema Escalável!'/>
       <Portfolio/>
-      <Services/>
+      <Services title="Serviços"/>
     </>
   )
 }
