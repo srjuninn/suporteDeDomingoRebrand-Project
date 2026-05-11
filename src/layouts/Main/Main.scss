@@ -16,11 +16,12 @@
             @include centralize-flex;
 
             h1 {
-                font-size: 70px;
+                font-size: 62px;
                 font-weight: 700;
                 text-align: right;
                 letter-spacing: 0.7;
                 color: $colorWhite100;
+                min-width: 700px;
                 width: 600px;
                 height: 400px;
                 white-space: pre-line;
