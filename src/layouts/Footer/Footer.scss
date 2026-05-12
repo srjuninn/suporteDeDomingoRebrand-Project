@@ -1,0 +1,104 @@
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+footer {
+    @include centralize-flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    h2 {
+        width: 1300px;
+        color: $colorWhite100;
+        text-align: center;
+        font-family: "Space Grotesk";
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 16.8px;
+    }
+
+    h2.secundary {
+        width: 660px;
+        color: $colorWhite100;
+        font-family: Roboto;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 3px;
+    }
+
+    .socialMedias {
+        @include centralize-flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h3 {
+            color: $colorWhite100;
+            font-family: Roboto;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .socialWrap {
+            @include centralize-flex;
+            gap: 30px;
+            width: 500px;
+
+            .instagram,
+            .linkedin {
+                @include centralize-flex;
+                gap: 15px;
+                color: $colorWhite100;
+                font-family: Roboto;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        .whatsapp {
+
+            @include centralize-flex;
+            gap: 15px;
+            color: $colorWhite100;
+            font-family: Roboto;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    h4 {
+        color: $colorWhite100;
+        font-family: Roboto;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    h5 {
+        color: $colorWhite100;
+        font-family: Roboto;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    p {
+        color: $colorWhite100;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
