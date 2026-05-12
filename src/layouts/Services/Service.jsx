@@ -6,7 +6,7 @@ import RightService from '@components/RightService/RightService';
 import UxUi from '@images/UxUiHeroImage.png'
 import visualIdentity from '@images/visualIdentityHeroImg.png'
 import brading from '@images/bradingHeroImage.png'
-import marketing from '@images/bradingHeroImage.png'
+import marketing from '@images/marketingHeroImage.png'
 import desenvolvimento from '@images/desenvolvimentoHeroImage.png'
 import consultoria from '@images/consultoriaHeroImage.png'
 
