@@ -74,7 +74,6 @@ export default function Services({ title, description }){
                         desc={desc}
                         name={name}
                         isSelected={selectedService?.id === id}
-                        onMouseEnter={() => setSelectedService({ id, desc })}
                         onClick={() => setSelectedService({ id, desc })}
                     />
                 ))}
