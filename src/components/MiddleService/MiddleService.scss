@@ -1,0 +1,59 @@
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.middleService{
+    position: relative;
+    @include centralize-flex;    
+    flex-direction: column;
+    
+    gap: 30px;
+    padding: 10px 5px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover,
+    &.active {
+        transform: translateY(-6px);
+    }
+    
+    span {
+        position: absolute;
+        top: 9%;
+        left: 46%;
+        color: $colorWhite100;
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    button {
+        padding: 0;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 78%;
+        left: 48%;
+        
+        img{
+            width: 100%;
+            rotate: -90deg;
+        }
+    }
+    .serviceImg {
+        position: absolute;
+        top: 25%;
+        width: 60%;
+    }
+    p{
+        text-align: center;
+        color: $colorWhite100;
+        font-family: "Inter", sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

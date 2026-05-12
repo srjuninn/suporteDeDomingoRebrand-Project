@@ -8,22 +8,27 @@
         width: 1200px;
         height: 800px;
         background-image: url('@images/mainVetor.png');
-        background-repeat: no-repeat;   
-        background-size: cover;        
-        background-position: center;    
-        
-        .mainContent{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .mainContent {
             @include centralize-flex;
 
             h1 {
-                font-size: 70px;
+                font-size: 62px;
                 font-weight: 700;
                 text-align: right;
                 letter-spacing: 0.7;
                 color: $colorWhite100;
+                // min-width: 700px;
                 width: 600px;
-                height: 400px;
+                height: 100%;
                 white-space: pre-line;
+
+                font-family: "Roboto", sans-serif;
+                line-height: 101px;
+                letter-spacing: 0.7px;
             }
 
         }
