@@ -5,7 +5,7 @@ export default function Button({ children }){
     return(
         <button>
             {children}
-            <RightUpArrow/>
+            <RightUpArrow w="50" h="50"/>
         </button>
     )
 }

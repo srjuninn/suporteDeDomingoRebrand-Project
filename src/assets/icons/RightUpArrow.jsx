@@ -1,9 +1,9 @@
 import * as React from "react"
-const RightUpArrow = (props) => (
+const RightUpArrow = ({ w=24, h=24, ...props}) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={50}
-    height={50}
+    width={w}
+    height={h}
     viewBox="0 0 24 24"
     fill="none"
     {...props}
