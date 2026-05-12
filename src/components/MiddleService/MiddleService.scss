@@ -9,6 +9,13 @@
     gap: 30px;
     padding: 10px 5px;
     width: 300px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover,
+    &.active {
+        transform: translateY(-6px);
+    }
     
     span {
         position: absolute;
@@ -41,6 +48,7 @@
         width: 60%;
     }
     p{
+        text-align: center;
         color: $colorWhite100;
         font-family: "Inter", sans-serif;
         font-size: 18px;
