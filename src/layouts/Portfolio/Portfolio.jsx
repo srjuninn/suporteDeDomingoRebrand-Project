@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Code Trouble",
     description: "Projeto Code Trouble",
-    link: "https://a.com",
+    link: "https://codetrouble.com.br/",
     image: codeTroubleImage,
   },
   {
