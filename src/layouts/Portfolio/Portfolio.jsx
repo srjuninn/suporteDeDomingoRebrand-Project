@@ -56,7 +56,7 @@ const projects = [
   {
     title: "Toque AI",
     description: "Projeto Toque AI",
-    link: "https://h.com",
+    link: "https://toqueai.com.br/",
     image: toqueAiImage,
   },
 ];
