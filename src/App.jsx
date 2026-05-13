@@ -1,26 +1,25 @@
-import '@src/App.scss'
-// import Header from '@layouts/Header/Header'
-// import SuporteDeDomingoLogoType from '@icons/sddLogoType'
-// import SwitchLanguage from '@components/SwitchLanguage/SwitchLanguage'
+import './i18n'
+import { useTranslation } from 'react-i18next'
 import Main from '@layouts/Main/Main'
 import Portfolio from '@layouts/Portfolio/Portfolio'
 import Services from '@layouts/Services/Service'
 import Footer from '@layouts/Footer/Footer'
 
 function App() {
-
+  const { t } = useTranslation()
 
   return (
     <>
-      <Main content='Empresas sólidas Precisam de 
-                      Um sistema Escalável!'/>
-      <Portfolio/>
-      <Services title="Serviços"/>
+      <Main />
+      <Portfolio />
+      <Services title={t('nav.services')} />
       <Footer 
-        companyName="SUPORTE DE DOMINGO" 
-        tagLine="Quero ver meu negocio crescer!" 
-        rightsReserved="2026 Todos os direitos reservados" 
-        copyRight="&copy2026"/>
+        companyName={t('footer.companyName')} 
+        tagLine={t('footer.tagLine')} 
+        rightsReserved={t('footer.rightsReserved')} 
+        copyRight={t('footer.copyRight')} 
+        date={t('footer.date')}
+      />
     </>
   )
 }
