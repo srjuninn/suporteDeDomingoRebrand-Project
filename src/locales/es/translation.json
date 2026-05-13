@@ -1,0 +1,90 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "projects": "Proyectos",
+        "services": "Servicios",
+        "contact": "Contacto"
+    },
+    "main": {
+        "title": "¡Las empresas sólidas necesitan un sistema escalable!",
+        "button": "¡Quiero escalar!"
+    },
+    "portfolio": {
+        "title": "Portafolio",
+        "viewProject": "Ver proyecto",
+        "projects": {
+            "codeTrouble": {
+                "title": "Code Trouble",
+                "description": "Plataforma colaborativa inspirada en foros de preguntas y artículos técnicos. El proyecto incluyó diseño responsivo con la metodología 'Atomic Design', identidad visual propia y enfoque en la experiencia del usuario, integraciones y pruebas de usabilidad."
+            },
+            "crjSolucoes": {
+                "title": "CRJ Soluciones",
+                "description": "Proyecto de sitio institucional multipágina para una empresa de mantenimiento de edificios. Incluyó estructuración del sitemap, definición de jerarquía de contenido, creación de diseño responsivo (desktop y móvil), organización de servicios enfocados en condominios y empresas, además de la estandarización visual para reforzar credibilidad, claridad y conversión vía WhatsApp."
+            },
+            "elevare": {
+                "title": "Elevare",
+                "description": "Branding enfocado en la estética y la funcionalidad, especializado en diseño de empaques para productos de Medicina Tradicional China."
+            },
+            "joysGourmet": {
+                "title": "Joys Gourmet",
+                "description": "Proyecto de identidad visual para Joy’s Gourmet, especializada en catering para eventos corporativos. El trabajo se centró en sofisticación, elegancia y credibilidad, con aplicación de la marca en materiales físicos, uniformes, menús y base visual para futuras expansiones como sitios web y productos físicos."
+            },
+            "profCorrea": {
+                "title": "Prof Correa",
+                "description": "Landing page creada para presentar la identidad visual y marca personal del Profesor Corrêa. El proyecto se centró en accesibilidad, estandarización de componentes y alto rendimiento en la web."
+            },
+            "sante": {
+                "title": "Santé",
+                "description": "Proyecto de landing page para una clínica odontológica, con enfoque en transmitir credibilidad, accesibilidad y confianza a través del diseño, junto con un sistema de identidad visual consistente."
+            },
+            "teacherMarceli": {
+                "title": "Teacher Marceli",
+                "description": "Proyecto enfocado en la estructuración visual y estratégica de la profesora de inglés. Desarrollo de identidad visual, definición de jerarquía de contenido, organización de la oferta y creación de una landing page con enfoque en claridad, acogida y conversión."
+            },
+            "toqueAi": {
+                "title": "Toque AI",
+                "description": "Proyecto de landing page e identidad visual para el producto digital Toque AI. El enfoque fue unir rendimiento, claridad de propuesta de valor y escalabilidad, validando componentes reutilizables y usabilidad práctica."
+            }
+        }
+    },
+    "services": {
+        "title": "Servicios",
+        "defaultDescription": "Pasa el cursor sobre una tarjeta para ver la descripción del servicio.",
+        "items": {
+            "uxui": {
+                "name": "Diseño UX & UI",
+                "description": "Transformamos ideas en interfaces intuitivas y responsivas, enfocadas en la experiencia del usuario y diseñadas para escalar globalmente."
+            },
+            "visualIdentity": {
+                "name": "Identidad visual",
+                "description": "Creamos contenido para redes sociales, presentaciones profesionales y materiales promocionales. Siempre con claridad, estética y consistencia visual."
+            },
+            "branding": {
+                "name": "Branding",
+                "description": "Construimos marcas con personalidad. Desde el logotipo hasta la paleta de colores, creamos identidades que conectan, comunican y fortalecen tu posicionamiento."
+            },
+            "marketing": {
+                "name": "Marketing Digital",
+                "description": "Campañas inteligentes y segmentadas con enfoque en resultados reales. Estrategia, creatividad y rendimiento para que tu negocio crezca con propósito."
+            },
+            "development": {
+                "name": "Desarrollo de Software",
+                "description": "Aplicaciones web y móviles a medida, con Clean Architecture, pruebas automatizadas y escalabilidad integrada desde el inicio."
+            },
+            "consulting": {
+                "name": "Consultoría",
+                "description": "Diagnóstico de procesos, automatizaciones y capacitaciones prácticas para que tu equipo evolucione con estrategia y eficiencia."
+            }
+        }
+    },
+    "footer": {
+        "companyName": "Suporte de Domingo",
+        "tagLine": "¡Quiero ver crecer mi negocio!",
+        "rightsReserved": "Todos los derechos reservados.",
+        "socials": "Redes Sociales",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "whatsapp": "Whatsapp",
+        "location": "São Paulo, Brasil"
+    }
+}
