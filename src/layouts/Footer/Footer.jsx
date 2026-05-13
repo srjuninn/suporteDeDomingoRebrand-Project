@@ -3,8 +3,10 @@ import RightUpArrow from "@icons/RightUpArrow";
 import LinkedIn from "@icons/Linkedin";
 import Whatsapp from "@icons/Whatsapp";
 import '@layouts/Footer/Footer.scss'
+import { useTranslation } from "react-i18next";
 
-export default function Footer({ companyName, tagLine, rightsReserved, copyRight, date }) {
+export default function Footer() {
+    const { t } = useTranslation();
     const now = new Date();
     const time = new Intl.DateTimeFormat("pt-BR", {
         hour: "2-digit",
@@ -14,31 +16,31 @@ export default function Footer({ companyName, tagLine, rightsReserved, copyRight
 
     return (
         <footer>
-            <h2>{companyName} ⌘</h2>
-            <h2 className="secundary">{tagLine}</h2>
+            <h2>{t("footer.companyName")} ⌘</h2>
+            <h2 className="secundary">{t("footer.tagLine")}</h2>
             <div className="socialMedias">
-                <h3>Redes Sociais</h3>
+                <h3>{t("footer.socials")}</h3>
                 <div className="socialWrap">
                     <div className="instagram">
                         <Instagram />
-                        Instagram
+                        {t("footer.instagram")}
                         <RightUpArrow w="30" h="30" />
                     </div>
                     <div className="linkedin">
                         <LinkedIn />
-                        LinkedIn
+                        {t("footer.linkedin")}
                         <RightUpArrow />
                     </div>
                 </div>
                 <div className="whatsapp">
                     <Whatsapp />
-                    Whatsapp
+                    {t("footer.whatsapp")}
                     <RightUpArrow />
                 </div>
             </div>
-            <h4>© {new Date().getFullYear()} Todos os direitos reservados.</h4>
-            <h5>Suporte de Domingo</h5>
-            <p>São Paulo, Brasil – {time}</p>
+            <h4>© {new Date().getFullYear()} {t("footer.rightsReserved")}</h4>
+            <h5>{t("footer.companyName")}</h5>
+            <p>{t("footer.location")} – {time}</p>
         </footer>
     )
 }

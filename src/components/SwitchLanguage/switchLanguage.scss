@@ -2,36 +2,70 @@
 @use '@styles/variables' as *;
 
 .switch {
-    position: absolute;
-    top: 3.7%;
-    right: 48%;
-    transform: translateX(250%);
+  position: absolute;
+  top: 3.7%;
+  right: 48%; // padrão para português
+  transform: translateX(250%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  max-width: 100%;
+  min-width: 170px;
+
+  background-color: $colorBlacktransp12;
+  border: 1px solid $colorWhite100;
+  box-shadow: 4px 4px 4px 0 rgba(250, 250, 250, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  .textWrap {
     @include centralize-flex;
     gap: 12px;
-    padding: 5px 10px;
-    border-radius: 10px;
-    max-width: 100%;
+    width: 100%;
+    cursor: pointer;
 
-    background-color: $colorBlacktransp12;
-    border: 1px solid $colorWhite100;
-    box-shadow: 4px 4px 4px 0 rgba(250, 250, 250, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    .textWrap {
-        @include centralize-flex;
-        gap: 12px;
-
-        p {
-            color: $colorWhite100;
-            
-            font-size: 24px;
-            font-weight: 700;
-            text-align: center;
-            font-family: "Space Grotesk";
-            font-style: normal;
-            line-height: 40px;
-            letter-spacing: -0.96px;
-        }
+    p {
+      color: $colorWhite100;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      font-family: "Space Grotesk";
+      font-style: normal;
+      line-height: 40px;
+      letter-spacing: -0.96px;
     }
+
+    .arrow {
+      transition: transform 0.3s ease;
+
+      &.arrow--up {
+        transform: rotate(180deg); // seta pra cima
+      }
+    }
+  }
+
+  .dropdown {
+    width: 100%;
+
+    .option {
+      @include centralize-flex;
+      gap: 12px;
+      justify-content: flex-start;
+      text-align: left;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+// quando não for português, remove o right
+.switch--noRight {
+  text-align-last: left;
+  position: absolute;
+  right: 44%;
 }

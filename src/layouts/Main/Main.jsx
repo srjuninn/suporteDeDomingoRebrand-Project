@@ -4,26 +4,28 @@ import mainHeroImg from '@images/mainHeroImg.png'
 import Header from '@layouts/Header/Header'
 import SuporteDeDomingoLogoType from '@icons/sddLogoType'
 import SwitchLanguage from '@components/SwitchLanguage/SwitchLanguage'
+import { useTranslation } from 'react-i18next'
 
-export default function Main({ content }) {
-      const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#services', label: 'Services' },
-    { href: '#contact', label: 'Contact' },
+export default function Main() {
+  const { t } = useTranslation()
+
+  const navLinks = [
+    { href: '#home', label: t('nav.home') },
+    { href: '#projects', label: t('nav.projects') },
+    { href: '#services', label: t('nav.services') },
+    { href: '#contact', label: t('nav.contact') },
   ]
-    return (
-        <>
-            <main>
-                <SuporteDeDomingoLogoType />
-                <Header links={navLinks} />
-                <SwitchLanguage language="Portugese" />
-                <div className="mainContent">
-                    <h1>{content}</h1>
-                    <img src={mainHeroImg} alt="imagem ilustrativa de um serviço de desenvolvimnto de sistema" />
-                </div>
-                <Button>Eu quero escalar!</Button>
-            </main>
-        </>
-    )
+
+  return (
+    <main>
+      <SuporteDeDomingoLogoType />
+      <Header links={navLinks} />
+      <SwitchLanguage />
+      <div className="mainContent">
+        <h1>{t('main.title')}</h1>
+        <img src={mainHeroImg} alt="imagem ilustrativa de um serviço de desenvolvimento de sistema" />
+      </div>
+      <Button>{t('main.button')}</Button>
+    </main>
+  )
 }

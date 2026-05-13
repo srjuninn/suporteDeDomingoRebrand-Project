@@ -1,0 +1,97 @@
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Projects",
+        "services": "Services",
+        "contact": "Contact"
+    },
+    "main": {
+        "title": "Solid companies need a scalable system!",
+        "button": "I want to scale!"
+    },
+    "footer": {
+        "companyName": "SUPORTE DE DOMINGO",
+        "tagLine": "I want to see my business grow!",
+        "rightsReserved": "2026 All rights reserved",
+        "copyRight": "©2026",
+        "date": "Today's date is today's date"
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "viewProject": "View project",
+        "projects": {
+            "codeTrouble": {
+                "title": "Code Trouble",
+                "description": "Collaborative platform inspired by Q&A forums and technical articles. The project involved responsive design using the 'Atomic Design' methodology, a unique visual identity, and a focus on user experience, integrations, and usability testing."
+            },
+            "crjSolucoes": {
+                "title": "CRJ Solutions",
+                "description": "Institutional multipage website project for a building maintenance company. It involved sitemap structuring, content hierarchy definition, responsive layout creation (desktop and mobile), service organization focused on condominiums and companies, and visual standardization to reinforce credibility, clarity, and conversion via WhatsApp."
+            },
+            "elevare": {
+                "title": "Elevare",
+                "description": "Branding focused on aesthetics and functionality, specialized in packaging design for Traditional Chinese Medicine products."
+            },
+            "joysGourmet": {
+                "title": "Joys Gourmet",
+                "description": "Visual identity project for Joy’s Gourmet, specialized in catering for corporate events. The work focused on sophistication, elegance, and credibility, with brand application in physical materials, uniforms, menus, and a visual base for future expansions such as websites and physical products."
+            },
+            "profCorrea": {
+                "title": "Prof Correa",
+                "description": "Landing page created to present the visual identity and personal brand of Professor Corrêa. The project focused on accessibility, component standardization, and high web performance."
+            },
+            "sante": {
+                "title": "Santé",
+                "description": "Landing page project for a dental clinic, focusing on conveying credibility, accessibility, and trust through design, combined with a consistent visual identity system."
+            },
+            "teacherMarceli": {
+                "title": "Teacher Marceli",
+                "description": "Project focused on the visual and strategic structuring of the English teacher. Development of visual identity, content hierarchy definition, offer organization, and creation of a landing page focused on clarity, warmth, and conversion."
+            },
+            "toqueAi": {
+                "title": "Toque AI",
+                "description": "Landing page and visual identity project for the digital product Toque AI. The focus was on combining performance, clarity of value proposition, and scalability, validating reusable components and practical usability."
+            }
+        }
+    },
+    "services": {
+        "title": "Services",
+        "defaultDescription": "Hover over a card to see the service description.",
+        "items": {
+            "uxui": {
+                "name": "UX & UI Design",
+                "description": "We transform ideas into intuitive, responsive interfaces focused on user experience, designed to scale globally."
+            },
+            "visualIdentity": {
+                "name": "Visual Identity",
+                "description": "We create content for social media, professional presentations, and promotional materials. Always with clarity, aesthetics, and visual consistency."
+            },
+            "branding": {
+                "name": "Branding",
+                "description": "We build brands with personality. From logo to color palette, we create identities that connect, communicate, and strengthen your positioning."
+            },
+            "marketing": {
+                "name": "Digital Marketing",
+                "description": "Smart, segmented campaigns focused on real results. Strategy, creativity, and performance to help your business grow with purpose."
+            },
+            "development": {
+                "name": "Software Development",
+                "description": "Custom web and mobile applications with Clean Architecture, automated testing, and scalability built in from the start."
+            },
+            "consulting": {
+                "name": "Consulting",
+                "description": "Process diagnostics, automations, and practical training for your team to evolve with strategy and efficiency."
+            }
+        }
+    },
+    "footer": {
+        "companyName": "Suporte de Domingo",
+        "tagLine": "I want to see my business grow!",
+        "rightsReserved": "All rights reserved.",
+        "socials": "Social Media",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "whatsapp": "Whatsapp",
+        "location": "São Paulo, Brazil"
+    }
+}
