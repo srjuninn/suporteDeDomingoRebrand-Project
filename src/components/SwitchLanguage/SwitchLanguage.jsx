@@ -4,6 +4,7 @@ import brazilFlag from '@images/brazilFlag.png'
 import usaFlag from '@images/euaFlag.png'
 import spainFlag from '@images/spainFlag.png'
 import arrowDown from '@images/arrowDown.png'
+import i18n from '@src/i18n' // importa sua config do i18n
 
 const languages = {
     pt: { label: 'Português', flag: brazilFlag },
@@ -18,7 +19,7 @@ export default function SwitchLanguage() {
     const handleSelect = (lang) => {
         setCurrentLang(lang)
         setOpen(false)
-        // aqui você pode chamar i18n.changeLanguage(lang) se estiver usando react-i18next
+        i18n.changeLanguage(lang) // troca idioma global
     }
 
     return (
