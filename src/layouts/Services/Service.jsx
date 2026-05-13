@@ -5,76 +5,45 @@ import MiddleService from '@components/MiddleService/MiddleService';
 import RightService from '@components/RightService/RightService';
 import UxUi from '@images/UxUiHeroImage.png'
 import visualIdentity from '@images/visualIdentityHeroImg.png'
-import brading from '@images/bradingHeroImage.png'
+import brandingImg from '@images/bradingHeroImage.png'
 import marketing from '@images/marketingHeroImage.png'
 import desenvolvimento from '@images/desenvolvimentoHeroImage.png'
 import consultoria from '@images/consultoriaHeroImage.png'
+import { useTranslation } from 'react-i18next'
 
-export default function Services({ title, description }){
+export default function Services() {
+    const { t } = useTranslation()
+
     const services = [
-        {   id: 1, 
-            Component: 
-                LeftService, 
-                    number: '#01', 
-                    img: UxUi, 
-                    desc: 'Transformamos ideias em interfaces intuitivas, responsivas e com foco na experiência do usuário projetadas para escalar globalmente.', 
-                    name: 'Design UX & UI' },
-        {   id: 2, 
-            Component: 
-                MiddleService, 
-                number: '#02', 
-                img: visualIdentity, 
-                desc: 'Criamos conteúdos para redes sociais, apresentações profissionais e materiais promocionais. Sempre com clareza, estética e consistência visual.', 
-                name: 'Identidade visual' },
-        {   id: 3, 
-                Component: 
-                    RightService, 
-                    number: '#03', 
-                    img: brading, 
-                    desc: 'Construímos marcas com personalidade. Do logotipo à paleta de cores, criamos identidades que conectam, comunicam e fortalecem o seu posicionamento.',
-                    name: 'Brading' },
-        {   id: 4, 
-                Component: 
-                    LeftService, 
-                    number: '#04', 
-                    img: marketing, 
-                    desc: 'Campanhas inteligentes e segmentadas com foco em resultados reais. Estratégia, criatividade e performance para seu negócio crescer com propósito.', 
-                    name: 'Marketing Digital' },
-        {   id: 5, 
-                Component: 
-                    MiddleService, 
-                    number: '#05', 
-                    img: desenvolvimento, 
-                    desc: 'Aplicações web e mobile sob medida, com Clean Architecture, testes automatizados e escalabilidade integrada desde o início.', 
-                    name: 'Desenvolvimento de Software' },
-        {   id: 6,  
-                Component: 
-                    RightService, 
-                    number: '#06', 
-                    img: consultoria, 
-                    desc: 'Diagnóstico de processos, automações e treinamentos práticos para sua equipe evoluir com estratégia e eficiência.', 
-                    name: 'Consultoria' },
+        { id: 1, key: 'uxui', Component: LeftService, number: '#01', img: UxUi },
+        { id: 2, key: 'visualIdentity', Component: MiddleService, number: '#02', img: visualIdentity },
+        { id: 3, key: 'branding', Component: RightService, number: '#03', img: brandingImg },
+        { id: 4, key: 'marketing', Component: LeftService, number: '#04', img: marketing },
+        { id: 5, key: 'development', Component: MiddleService, number: '#05', img: desenvolvimento },
+        { id: 6, key: 'consulting', Component: RightService, number: '#06', img: consultoria },
     ]
 
-    const defaultDescription = description || 'Passe o mouse sobre um card para ver a descrição do serviço.'
+    const defaultDescription = t('services.defaultDescription')
     const [selectedService, setSelectedService] = useState(services[0])
 
-    const activeDescription = selectedService?.desc ?? defaultDescription
+    const activeDescription = selectedService
+        ? t(`services.items.${selectedService.key}.description`)
+        : defaultDescription
 
-    return(
+    return (
         <section className="services">
-            <h2>{title}</h2>
+            <h2>{t('services.title')}</h2>
             <p>{activeDescription}</p>
             <div className="servicesWrapper">
-                {services.map(({ id, Component, number, img, desc, name }) => (
+                {services.map(({ id, key, Component, number, img }) => (
                     <Component
                         key={id}
                         number={number}
                         img={img}
-                        desc={desc}
-                        name={name}
+                        desc={t(`services.items.${key}.description`)}
+                        name={t(`services.items.${key}.name`)}
                         isSelected={selectedService?.id === id}
-                        onClick={() => setSelectedService({ id, desc })}
+                        onClick={() => setSelectedService({ id, key })}
                     />
                 ))}
             </div>
