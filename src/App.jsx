@@ -20,7 +20,7 @@ function App() {
         companyName="SUPORTE DE DOMINGO" 
         tagLine="Quero ver meu negocio crescer!" 
         rightsReserved="2026 Todos os direitos reservados" 
-        copyRight="&copy2026" date="A data de hoje é a data de hoje"/>
+        copyRight="&copy2026"/>
     </>
   )
 }
