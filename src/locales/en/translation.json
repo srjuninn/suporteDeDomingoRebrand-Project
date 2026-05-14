@@ -18,6 +18,7 @@
     },
     "portfolio": {
         "title": "Portfolio",
+        "noDomain": "No domain available",
         "viewProject": "View project",
         "projects": {
             "codeTrouble": {
