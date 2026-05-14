@@ -4,6 +4,7 @@ import LinkedIn from "@icons/Linkedin";
 import Whatsapp from "@icons/Whatsapp";
 import '@layouts/Footer/Footer.scss'
 import { useTranslation } from "react-i18next";
+import { openWhatsapp } from '@utils/openWhatsapp'
 
 export default function Footer() {
     const { t } = useTranslation();
@@ -21,18 +22,18 @@ export default function Footer() {
             <div className="socialMedias">
                 <h3>{t("footer.socials")}</h3>
                 <div className="socialWrap">
-                    <div className="instagram">
+                    <div className="instagram" onClick={openWhatsapp}>
                         <Instagram />
                         {t("footer.instagram")}
                         <RightUpArrow w="30" h="30" />
                     </div>
-                    <div className="linkedin">
+                    <div className="linkedin" onClick={openWhatsapp}>
                         <LinkedIn />
                         {t("footer.linkedin")}
                         <RightUpArrow />
                     </div>
                 </div>
-                <div className="whatsapp">
+                <div className="whatsapp" onClick={openWhatsapp}>
                     <Whatsapp />
                     {t("footer.whatsapp")}
                     <RightUpArrow />
