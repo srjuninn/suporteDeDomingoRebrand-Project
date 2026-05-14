@@ -1,5 +1,6 @@
 @use '@styles/mixins' as *;
 @use '@src/styles/variables' as *;
+@use '@src/styles/breakpoints' as *;
 
 header {
     position: absolute;
@@ -62,6 +63,24 @@ header {
 
                     &.active {
                         font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    @include respond-to(md){
+        top: 5.5%;
+        left: 53%;
+        width: auto;
+        height: auto;
+        min-width: 200px;
+        padding: 5px 40px;
+        nav {
+            ul {
+                gap: 30px;
+                li {
+                    a {
+                        font-size: 24px;
                     }
                 }
             }
