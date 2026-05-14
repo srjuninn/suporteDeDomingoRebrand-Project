@@ -2,9 +2,7 @@ const SuporteDeDomingoLogoType = (props) => (
   <svg
     className="sdd"
     xmlns="http://www.w3.org/2000/svg"
-    width={156}
-    height={65}
-    fill="none"
+    viewBox="0 0 156 65" // define proporção    fill="none"
     {...props}
   >
     <g clipPath="url(#a)">
