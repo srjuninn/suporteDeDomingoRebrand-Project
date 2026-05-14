@@ -17,7 +17,6 @@ header {
     background-color: $colorBlacktransp40;
     border: 1px solid $colorWhite100;
     box-shadow: 4px 4px 4px 0 rgba(250, 250, 250, 0.25);
-    // efeito de vidro
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
@@ -30,7 +29,6 @@ header {
                 a {
                     @include centralize-flex;
                     color: $colorWhite100;
-                    
                     font-size: 24px;
                     font-weight: 400;
                     text-align: right;
@@ -38,6 +36,29 @@ header {
                     font-style: normal;
                     line-height: 40px;
                     letter-spacing: -0.96px;
+                    cursor: pointer;
+                    position: relative; // necessário para o pseudo-elemento
+
+                    // underline animado no hover
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0%;
+                        height: 2px;
+                        background-color: $colorWhite100;
+                        transition: width 0.3s ease;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+
+                    // underline fixo no link ativo
+                    &.active::after {
+                        width: 100%;
+                    }
 
                     &.active {
                         font-weight: 700;
@@ -46,4 +67,4 @@ header {
             }
         }
     }
-}
+}   

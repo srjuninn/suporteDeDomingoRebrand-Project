@@ -48,7 +48,7 @@
         position: absolute;
         width: 80%;
         top: 25%;
-        
+
     }
 
     p {
@@ -60,4 +60,17 @@
         font-weight: 400;
         line-height: normal;
     }
+
+    .serviceDesc {
+        position: absolute;
+        top: 30%;
+        width: 80%;
+        color: $colorWhite100;
+        font-family: "Inter", sans-serif;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+
 }
