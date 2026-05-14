@@ -38,11 +38,14 @@ export default function Portfolio() {
     <section className="portfolio">
       <h2>{t("portfolio.title")}</h2>
       <p>{t(`portfolio.projects.${activeProject.key}.description`)}</p>
-      {activeProject.link && (
+      {activeProject.link ? (
         <a href={activeProject.link} target="_blank" rel="noreferrer">
           {t("portfolio.viewProject")}
         </a>
+      ) : (
+        <span className="no-domain">{t("portfolio.noDomain")}</span>
       )}
+
 
       <div className="carousel">
         <button onClick={prev} className="arrow left rotate alignL">
