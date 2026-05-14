@@ -1,1 +1,23 @@
-// aqui será os medias para responsividade em forma de variaveis
+// breakpoints 
+$breakpoint-xs: 320px;
+$breakpoint-sm: 428px;
+$breakpoint-md: 768px;
+
+// mixing para os medias 
+@mixin respond-to($breakpoint){
+    @if $breakpoint == xs {
+        @media(max-width: $breakpoint-xs){
+            @content;
+        }
+    }@else if $breakpoint == sm{
+        @media(max-width: $breakpoint-sm){
+            @content;
+        }
+    }@else if $breakpoint == md{
+        @media(max-width: $breakpoint-md){
+            @content;
+        }
+    }@else{
+        @warn "this breakpoint #{$breakpoint} doesn't exist!"
+    }
+}
