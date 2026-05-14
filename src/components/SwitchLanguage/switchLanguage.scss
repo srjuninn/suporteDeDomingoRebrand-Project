@@ -1,5 +1,6 @@
 @use '@styles/mixins' as *;
 @use '@styles/variables' as *;
+@use '@styles/breakpoints' as *;
 
 .switch {
   position: absolute;
@@ -61,6 +62,11 @@
       }
     }
   }
+
+  @include respond-to(md) {
+    top: 5.5%;
+    right: 51%;
+  }
 }
 
 // quando não for português, remove o right
@@ -68,4 +74,9 @@
   text-align-last: left;
   position: absolute;
   right: 44%;
+
+  @include respond-to(md) {
+    top: 5.5%;
+    right: 47%;
+  }
 }
