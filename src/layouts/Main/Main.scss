@@ -1,5 +1,6 @@
     @use '@styles/mixins' as *;
     @use '@styles/variables' as *;
+    @use '@styles/breakpoints' as *;
 
     main {
         @include centralize-flex;
@@ -33,4 +34,27 @@
 
         }
 
+        @include respond-to(md) {
+            max-width: 1050px;
+            background-size: contain;
+
+            .mainContent {
+                max-width: 900px;
+                width: 100%;
+
+                h1 {
+                    max-width: 450px;
+                    font-size: 52px;
+                }
+
+                img {
+                    width: 450px;
+                }
+
+            }
+            button {
+                transform: translate(-48%, -65%);
+
+            }
+        }
     }
