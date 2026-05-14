@@ -1,15 +1,17 @@
 import '@layouts/Header/Header.scss';
 import { useState } from 'react';
-import { openWhatsapp } from '@utils/openWhatsapp'
 
 export default function Header({ links = [] }) {
   const [activeLink, setActiveLink] = useState('#home')
 
   const handleClick = (href) => {
-    if (href === '#contact') {
-      openWhatsapp()
-    } else {
-      setActiveLink(href)
+    setActiveLink(href)
+
+    // se for contato, rola até o footer
+    const targetId = href === '#contact' ? '#socials' : href
+    const section = document.querySelector(targetId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
@@ -20,7 +22,7 @@ export default function Header({ links = [] }) {
           {links.map(({ href, label }) => (
             <li key={href}>
               <a
-                href={href === '#contact' ? undefined : href}
+                href={href}
                 className={activeLink === href ? 'active' : ''}
                 onClick={(e) => {
                   e.preventDefault()

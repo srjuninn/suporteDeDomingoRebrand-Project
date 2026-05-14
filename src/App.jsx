@@ -11,15 +11,21 @@ function App() {
   return (
     <>
       <Main />
-      <Portfolio />
-      <Services title={t('nav.services')} />
-      <Footer 
-        companyName={t('footer.companyName')} 
-        tagLine={t('footer.tagLine')} 
-        rightsReserved={t('footer.rightsReserved')} 
-        copyRight={t('footer.copyRight')} 
-        date={t('footer.date')}
-      />
+      <section id="projects">
+        <Portfolio />
+      </section>
+      <section id="services">
+        <Services title={t('nav.services')} />
+      </section>
+      <footer>
+        <Footer id="footer"
+          companyName={t('footer.companyName')}
+          tagLine={t('footer.tagLine')}
+          rightsReserved={t('footer.rightsReserved')}
+          copyRight={t('footer.copyRight')}
+          date={t('footer.date')}
+        />
+      </footer>
     </>
   )
 }
