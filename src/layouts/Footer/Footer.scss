@@ -13,9 +13,7 @@ footer {
         text-align: center;
         font-family: "Space Grotesk";
         font-size: 120px;
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
         letter-spacing: 16.8px;
     }
 
@@ -24,9 +22,7 @@ footer {
         color: $colorWhite100;
         font-family: Roboto;
         font-size: 60px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
         letter-spacing: 3px;
     }
 
@@ -39,9 +35,7 @@ footer {
             color: $colorWhite100;
             font-family: Roboto;
             font-size: 48px;
-            font-style: normal;
             font-weight: 400;
-            line-height: normal;
         }
 
         .socialWrap {
@@ -56,49 +50,77 @@ footer {
                 color: $colorWhite100;
                 font-family: Roboto;
                 font-size: 32px;
-                font-style: normal;
                 font-weight: 400;
-                line-height: normal;
+                cursor: pointer;
+                position: relative;
+
+                // underline animado
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    background-color: $colorWhite300;
+                    transition: width 0.3s ease;
+                }
+
+                &:hover {
+                    color: $colorWhite300;
+                    transform: translateY(-3px);
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
             }
         }
 
         .whatsapp {
-
             @include centralize-flex;
             gap: 15px;
             color: $colorWhite100;
             font-family: Roboto;
             font-size: 32px;
-            font-style: normal;
             font-weight: 400;
-            line-height: normal;
+            cursor: pointer;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 0%;
+                height: 2px;
+                background-color: $colorWhite300;
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: $colorWhite300;
+                transform: translateY(-3px);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
         }
     }
 
-    h4 {
-        color: $colorWhite100;
-        font-family: Roboto;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-
+    h4,
     h5 {
         color: $colorWhite100;
         font-family: Roboto;
         font-size: 28px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
     }
 
     p {
         color: $colorWhite100;
         font-family: Roboto;
         font-size: 20px;
-        font-style: normal;
         font-weight: 400;
-        line-height: normal;
     }
 }
