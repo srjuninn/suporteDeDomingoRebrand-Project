@@ -5,6 +5,7 @@ import Header from '@layouts/Header/Header'
 import SuporteDeDomingoLogoType from '@icons/sddLogoType'
 import SwitchLanguage from '@components/SwitchLanguage/SwitchLanguage'
 import { useTranslation } from 'react-i18next'
+import { openWhatsapp } from '@utils/openWhatsapp';
 
 export default function Main() {
   const { t } = useTranslation()
@@ -25,7 +26,7 @@ export default function Main() {
         <h1>{t('main.title')}</h1>
         <img src={mainHeroImg} alt="imagem ilustrativa de um serviço de desenvolvimento de sistema" />
       </div>
-      <Button>{t('main.button')}</Button>
+      <Button onClick={openWhatsapp}  >{t('main.button')}</Button>
     </main>
   )
 }
