@@ -1,5 +1,6 @@
 @use '@styles/mixins' as *;
 @use '@styles/variables' as *;
+@use '@styles/breakpoints' as *;
 
 .portfolio {
   @include centralize-flex;
@@ -67,12 +68,20 @@
       position: absolute;
       top: 10%;
       left: 1%;
+
+      @include respond-to(md){
+        left: -3%;
+      }
     }
 
     .alignR {
       position: absolute;
       top: 50%;
       right: 1%;
+
+      @include respond-to(md){
+        right: -3%;
+      }
     }
 
     .rotate {
@@ -134,6 +143,10 @@
         transform: scale(0.95);
       }
     }
+  }
+  @include respond-to(md){
+    max-width: 1050px;
+    
   }
 }
 
