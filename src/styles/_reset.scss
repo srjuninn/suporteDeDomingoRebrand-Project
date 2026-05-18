@@ -1,5 +1,5 @@
 /* Reset global SCSS Monstro */
-
+@use '@styles/breakpoints' as *;
 *,
 *::before,
 *::after {
@@ -81,6 +81,13 @@ h1, h2, h3, h4, h5, h6 {
   top: 3%;
   left: 52%;
   transform: translateX(-380%);
+  width: 156px;
+
+  @include respond-to(md){
+    top: 5%;
+    left: 54%;  
+    width: 140px;
+  }
 }
 
 .background-svg {
