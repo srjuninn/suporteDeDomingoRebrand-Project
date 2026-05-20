@@ -1,9 +1,10 @@
 import * as React from "react"
-const LinkedIn = (props) => (
+const LinkedIn = ({ width = 40, height = 40, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={40}
-    height={40}
+    viewBox="0 0 40 40"
+    width={width}
+    height={height}
     fill="none"
     {...props}
   >
