@@ -1,5 +1,6 @@
 @use '@styles/mixins' as *;
 @use '@styles/variables' as *;
+@use '@styles/breakpoints' as *;
 
 footer {
     @include centralize-flex;
@@ -122,5 +123,118 @@ footer {
         font-family: Roboto;
         font-size: 20px;
         font-weight: 400;
+    }
+
+    @include respond-to(sm) {
+        gap: 20px;
+        max-width: 450px;
+
+        h2 {
+            max-width: 90%;
+            font-size: 30px;
+            color: $colorWhite100;
+            text-align: center;
+            font-family: "Space Grotesk";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 6.72px;
+        }
+
+        h2.secundary {
+            color: $colorWhite100;
+            font-family: Roboto;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1.6px;
+        }
+
+        .socialMedias {
+            gap: 15px;
+            width: 100%;
+
+            h3 {
+                color: $colorWhite100;
+                font-family: Roboto;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            .socialWrap {
+
+                .instagram,
+                .linkedin {
+                    color: $colorWhite100;
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+
+                    &:hover {
+                        transform: none;
+                    }
+
+                    &:hover::after {
+                        width: 0;
+                    }
+                }
+            }
+
+            .whatsapp {
+
+                color: $colorWhite100;
+                font-family: Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                &:hover {
+                    transform: none;
+                }
+
+                &:hover::after {
+                    width: 0;
+                }
+            }
+        }
+
+        h4 {
+            margin-top: 10px;
+            width: 270px;
+            color: $colorWhite100;
+            text-align: center;
+            font-family: Roboto;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        h5 {
+            margin-top: 10px;
+            color: $colorWhite100;
+            font-family: Roboto;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        h6 {
+            margin-top: 10px;
+            color: $colorWhite100;
+            font-family: Roboto;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
     }
 }
