@@ -21,6 +21,10 @@ header {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
+    
+    @include respond-to(sm){
+        display: none;
+    }
     nav {
         ul {
             @include centralize-flex;

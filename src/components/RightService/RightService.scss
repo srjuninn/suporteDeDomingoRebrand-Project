@@ -26,6 +26,10 @@
         font-family: "Inter", sans-serif;
         font-size: 18px;
         font-weight: 400;
+
+    @include respond-to(sm){
+        right: 15%;
+    }
     }
 
     button {
@@ -41,6 +45,10 @@
             width: 100%;
             rotate: -145deg;
         }
+
+    @include respond-to(sm){
+        left: 15%;
+    }
     }
 
     .serviceImg,

@@ -19,7 +19,7 @@ export default function Services() {
         { id: 2, key: 'visualIdentity', Component: MiddleService, number: '#02', img: visualIdentity },
         { id: 3, key: 'branding', Component: RightService, number: '#03', img: brandingImg },
         { id: 4, key: 'marketing', Component: LeftService, number: '#04', img: marketing },
-        { id: 5, key: 'development', Component: MiddleService, number: '#05', img: desenvolvimento },
+        { id: 5, key: 'development', Component: MiddleService, number: '#05', img: desenvolvimento, buttonTop: '73%' },
         { id: 6, key: 'consulting', Component: RightService, number: '#06', img: consultoria },
     ]
 
@@ -35,13 +35,14 @@ export default function Services() {
             <h2>{t('services.title')}</h2>
             <p>{activeDescription}</p>
             <div className="servicesWrapper">
-                {services.map(({ id, key, Component, number, img }) => (
+                {services.map(({ id, key, Component, number, img, buttonTop }) => (
                     <Component
                         key={id}
                         number={number}
                         img={img}
                         desc={t(`services.items.${key}.description`)}
                         name={t(`services.items.${key}.name`)}
+                        buttonTop={buttonTop}
                         isSelected={selectedService?.id === id}
                         onClick={() => setSelectedService({ id, key })}
                     />

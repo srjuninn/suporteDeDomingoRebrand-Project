@@ -8,6 +8,7 @@ export default function MiddleService({
     img,
     desc,
     name,
+    buttonTop = '78%',
     isSelected,
     onMouseEnter,
     onMouseLeave,
@@ -25,6 +26,7 @@ export default function MiddleService({
             {/* Botão da setinha → abre WhatsApp */}
             <button
                 type="button"
+                style={{ top: buttonTop }}
                 onClick={(e) => {
                     e.stopPropagation() // impede que o clique no botão acione o clique da div
                     openWhatsapp()
