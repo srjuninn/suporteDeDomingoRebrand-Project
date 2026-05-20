@@ -12,7 +12,7 @@ const languages = {
     es: { label: 'Español', flag: spainFlag }
 }
 
-export default function SwitchLanguage() {
+export default function SwitchLanguage({ isMenuOpen = false }) {
     const [currentLang, setCurrentLang] = useState('pt')
     const [open, setOpen] = useState(false)
 
@@ -23,7 +23,7 @@ export default function SwitchLanguage() {
     }
 
     return (
-        <div className={`switch ${currentLang !== 'pt' ? 'switch--noRight' : ''}`}>
+        <div className={`switch ${currentLang !== 'pt' ? 'switch--noRight' : ''} ${isMenuOpen ? 'switch--visible' : ''}`}>
             <div className="textWrap" onClick={() => setOpen(!open)}>
                 <img src={languages[currentLang].flag} alt={languages[currentLang].label} />
                 <p>{languages[currentLang].label}</p>
