@@ -40,13 +40,35 @@
         gap: 60px;
         margin-top: 60px;
         max-width: 1200px;
+        width: 100%;
     }
 
-    
-      @include respond-to(md){
+    @include respond-to(md){
         max-width: 1050px;
-      }
-      @include respond-to(sm){
+    }
+
+    @media(max-width: 450px) {
         max-width: 450px;
-      }
+
+        .servicesWrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            width: 100%;
+            max-width: 100%;
+            gap: 24px;
+            padding-bottom: 10px;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            touch-action: pan-x;
+        }
+
+        .servicesWrapper > * {
+            flex: 0 0 auto;
+            min-width: 260px;
+            scroll-snap-align: start;
+        }
+    }
 }
