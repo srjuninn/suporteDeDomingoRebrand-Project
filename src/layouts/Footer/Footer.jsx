@@ -29,9 +29,9 @@ export default function Footer({ companyName, tagLine, rightsReserved, copyRight
                         rel="noopener noreferrer"
                         className="instagram"
                     >
-                        <Instagram />
+                        <Instagram width="25" height="25" />
                         {t("footer.instagram")}
-                        <RightUpArrow w="30" h="30" />
+                        <RightUpArrow w="24" h="24" />
                     </a>
 
                     {/* LinkedIn */}
@@ -41,17 +41,17 @@ export default function Footer({ companyName, tagLine, rightsReserved, copyRight
                         rel="noopener noreferrer"
                         className="linkedin"
                     >
-                        <LinkedIn />
+                        <LinkedIn width="25" height="25" />
                         {t("footer.linkedin")}
-                        <RightUpArrow />
+                        <RightUpArrow w="24" h="24" />
                     </a>
                 </div>
 
                 {/* WhatsApp */}
                 <div className="whatsapp" onClick={openWhatsapp}>
-                    <Whatsapp />
+                    <Whatsapp width="25" height="25" />
                     {t("footer.whatsapp")}
-                    <RightUpArrow />
+                    <RightUpArrow w="24" h="24" />
                 </div>
             </div>
 
