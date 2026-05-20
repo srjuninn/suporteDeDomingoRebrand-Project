@@ -46,4 +46,7 @@
       @include respond-to(md){
         max-width: 1050px;
       }
+      @include respond-to(sm){
+        max-width: 450px;
+      }
 }

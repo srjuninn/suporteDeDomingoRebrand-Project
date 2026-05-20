@@ -28,6 +28,10 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+    @include respond-to(sm){
+        left: 42%;
+    }
     }
 
     button {
@@ -43,6 +47,10 @@
             width: 100%;
             rotate: -90deg;
         }
+
+    @include respond-to(sm){
+        left: 44%;
+    }
     }
 
     .serviceImg {
